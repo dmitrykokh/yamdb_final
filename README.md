@@ -28,4 +28,6 @@
 
 ### Необходимо провести некотрую работу на сервере
 - ssh <login>@<внешний ip> (вход на сервер)
+- sudo systemctl stop nginx (Остановка службы nginx)
+- sudo apt install docker.io (Установка docker)
 - sudo apt  install docker-compose (установка docker-compose)
