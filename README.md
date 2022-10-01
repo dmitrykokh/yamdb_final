@@ -48,8 +48,6 @@ scp -r nginx <login>@<ip>:/home/<login>/
 scp docker-compose.yaml <login>@<ip>:/home/<login>/
 ```
 
-
-
 ### Для нормальной работы необходимо обновить секреты на GitHub
 - SSH_KEY (если генерировался новый ключ)
 - HOST
