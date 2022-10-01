@@ -23,8 +23,8 @@ jobs:
         cd api_yamdb/
         python manage.py test
     - name: Pytest
-        run: |
-          pytest
+      run: |
+        pytest
     - name: Send message if tests failed
       if: ${{ failure() }}
       uses: appleboy/telegram-action@master
