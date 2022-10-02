@@ -52,7 +52,7 @@ jobs:
           with:
             context: ./api_yamdb/
             push: true
-            tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final_web:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/infra_action:latest
         - name: Send message if build_and_push_to_docker_hub failed
           if: ${{ failure() }}
           uses: appleboy/telegram-action@master
@@ -75,6 +75,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_action:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
