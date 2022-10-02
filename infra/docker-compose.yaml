@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: mrdnk88/infra_action:latest
+    image: mrdnk88/yamdb_final_web:latest
     restart: always
     volumes:
       - static_value:/app/static/
